@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{background: #c9bda3;}                  /*Css оформление*/
+        .menu{
+            background-color: #ede2cb;   /*цвет фона*/
+            height: 440px;                     /*высота*/
+            width: 700px;                       /*ширина*/
+            display: block;            /*определяет, как элемент должен быть показан в документе Элемент показывается как блочный*/
+            margin: auto;                   /*величину отступа от каждого края элемента auto указывает что размер отступов будет автоматически рассчитан браузером.*/
+            text-align: center;         /*Определяет горизонтальное выравнивание текста в пределах элемента.Выравнивание текста по центру*/
+            padding: 5px;                   /*позволяет задать величину поля сразу для всех сторон элемента*/
+        }
+        .caption{
+            padding: 5px;
+            background-color: #d8c7a4;
+            margin: -5px;
+        }
+        .save{
+            padding:5px;
+            margin: 20px;
+            background-color: #ddb09d;
+            border-radius: 20px;
+        }
+        .save:hover{
+            padding: 5px;
+            margin: 10px;
+            margin-top: 25px;
+            background-color: #d89a7f;
+        }
+        h3{
+            margin-left: -350px;
+        }
+        #normal{
+            width: 74px;
+            float: left;
+            padding: 4px;
+            background-color:#e5ff00;
+            margin-left: 30px;
+            cursor: pointer;
+        }
+        #fast{
+            width: 60px;
+            float: left;
+            padding: 4px;
+            background-color:#ff0000;
+            margin-left: 30px;
+            cursor: pointer;
+        }
+        #slow{
+            width: 65px;
+            float: left;
+            padding: 4px;
+            background-color:#09ff00;
+            margin-left: 30px;
+            cursor: pointer;
+        }
+    .colors{
+        margin-top: -30px;
+        margin-left: 250px;
+    }
+    .optcolor{
+        background-color:#e0d3b8;
+    }
+    </style>
+</head>
+<body>
+    <div class="menu">
+        <div class="caption">
+            <h1>Настройки</h1>
+        </div>
+        <div class="optionworm optcolor">
+            <h3>Скорость</h3>
+            <div class="colors">
+        <div id="slow" onclick="localStorage.setItem('speedworm','250');">медленно</div>
+        <div id="normal" onclick="localStorage.setItem('speedworm','150');">нормально</div>
+        <div id="fast" onclick="localStorage.setItem('speedworm','50');">быстро</div>
+            </div>
+            <br>            <br>
+        </div>
+        <div class="save" onclick="document.location='worm.html'">
+                <h2>Сохранить</h2>
+        </div>
+    </div>
+    <script src="worm1.js" type="text/javascript"></script>
+</body>
+</html>
